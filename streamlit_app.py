@@ -468,7 +468,8 @@ def display_companies_table(df):
         'Tags': 'Categories',
         'Website': 'Website',
         'YC Profile': 'YC Profile',
-        'LinkedIn': 'LinkedIn'
+        'LinkedIn': 'LinkedIn',
+        'Has_YC_Batch_Indicator': 'YC Indicator'
     }
     
     table_display = table_df[list(display_columns.keys())].rename(columns=display_columns)
@@ -494,6 +495,7 @@ def display_companies_table(df):
             "LinkedIn": st.column_config.LinkColumn("LinkedIn"),
             "Short Description": st.column_config.TextColumn("Short Description", width="large"),
             "Categories": st.column_config.TextColumn("Categories", width="medium"),
+            "YC Indicator": st.column_config.TextColumn("YC Indicator", width="small"),
         }
     )
     
